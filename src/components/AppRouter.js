@@ -1,9 +1,11 @@
 import React from "react";
-import { Route, Routes, redirect } from "react-router-dom";
+import { Navigate, Route, Routes, redirect } from "react-router-dom";
 import { authRoutes, publicRoutes } from "../Routes";
+import { SHOP_ROUTE } from "../utils/consts";
 
 const AppRouter = () => {
   const isAuth = false;
+
   return (
     <Routes>
       {isAuth &&
@@ -13,6 +15,7 @@ const AppRouter = () => {
       {publicRoutes.map(({ path, Element }) => (
         <Route key={path} path={path} element={Element} />
       ))}
+      <Route path="*" element={<Navigate to={SHOP_ROUTE} replace />} />
     </Routes>
   );
 };

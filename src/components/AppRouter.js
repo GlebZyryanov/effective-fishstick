@@ -3,15 +3,13 @@ import { Navigate, Route, Routes, redirect } from "react-router-dom";
 import { authRoutes, publicRoutes } from "../Routes";
 import { SHOP_ROUTE } from "../utils/consts";
 import { Context } from "../index";
-import { Container } from "react-bootstrap";
 
 const AppRouter = () => {
   const { user } = useContext(Context);
 
   console.log(user);
   return (
-    <Container>
-      <Routes>
+    <Routes>
       {user.isAuth &&
         authRoutes.map(({ path, Element }) => (
           <Route key={path} path={path} element={Element} />
@@ -21,7 +19,6 @@ const AppRouter = () => {
       ))}
       <Route path="*" element={<Navigate to={SHOP_ROUTE} replace />} />
     </Routes>
-    </Container>
   );
 };
 

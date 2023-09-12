@@ -22,7 +22,7 @@ const NavBar = observer(() => {
             fontSize: 20,
           }}
         >
-          GuitarShop
+          MusicShop
         </NavLink>
         {user.isAuth ? (
           <Nav className="ms-auto" style={{ color: "white" }}>

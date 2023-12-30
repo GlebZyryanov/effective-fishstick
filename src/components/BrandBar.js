@@ -4,15 +4,15 @@ import { Context } from "../index";
 import { Card, Col, Row } from "react-bootstrap";
 
 const BrandBar = observer(() => {
-  const { device } = useContext(Context);
+  const { tech } = useContext(Context);
   return (
     <Row className="d-flex">
-      {device.brands.map((brand) => (
+      {tech.brands.map((brand) => (
         <Col md={2} >
           <Card
             style={{ cursor: "pointer" }}
-            border={brand.id === device.selectedBrand.id ? "dark" : "light"}
-            onClick={() => device.setSelectedBrand(brand)}
+            border={brand.id === tech.selectedBrand.id ? "dark" : "light"}
+            onClick={() => tech.setSelectedBrand(brand)}
             key={brand.id}
             className="p-2 ms-auto"
           >

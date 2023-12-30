@@ -2,12 +2,12 @@ import Admin from "./pages/Admin";
 import Basket from "./pages/Basket";
 import Shop from "./pages/Shop";
 import Auth from "./pages/Auth";
-import DevicePage from "./pages/DevicePage";
+import TechPage from "./pages/TechPage";
 
 import {
   ADMIN_ROUTE,
   BASKET_ROUTE,
-  DEVICE_ROUTE,
+  TECH_ROUTE,
   LOGIN_ROUTE,
   REGISTRATION_ROUTE,
   SHOP_ROUTE,
@@ -38,7 +38,7 @@ export const publicRoutes = [
     Element: <Auth/>,
   },
   {
-    path: DEVICE_ROUTE + "/:id",
-    Element: <DevicePage/>,
+    path: TECH_ROUTE + "/:id",
+    Element: <TechPage/>,
   },
 ];

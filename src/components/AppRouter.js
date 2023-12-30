@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Navigate, Route, Routes, redirect } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import { authRoutes, publicRoutes } from "../Routes";
 import { SHOP_ROUTE } from "../utils/consts";
 import { Context } from "../index";
